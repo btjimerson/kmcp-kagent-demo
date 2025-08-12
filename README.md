@@ -324,7 +324,7 @@ kubectl get pods -n kmcp-system
 Build the earthquake MCP server:
 
 ```bash
-kmcp build --project-dir earthquake-mcp-server --push --tag $EARTHQUAKE_MCP_SERVER_IMAGE
+kmcp build --project-dir earthquake-mcp-server --platform linux/amd64 --push --tag $EARTHQUAKE_MCP_SERVER_IMAGE
 ```
 
 Deploy the earthquake MCP server to Kubernetes
@@ -336,7 +336,7 @@ kmcp deploy --file earthquake-mcp-server/kmcp.yaml --image $EARTHQUAKE_MCP_SERVE
 Build the random MCP server:
 
 ```bash
-kmcp build --project-dir random-mcp-server --push --tag $RANDOM_MCP_SERVER_IMAGE
+kmcp build --project-dir random-mcp-server --platform linux/amd64 --push --tag $RANDOM_MCP_SERVER_IMAGE
 ```
 
 Deploy the random MCP server to Kubernetes
